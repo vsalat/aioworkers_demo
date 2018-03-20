@@ -1,0 +1,15 @@
+http.port: 8090
+
+app:
+  router:
+    swagger_ui: /
+    # Swagger version
+    version_ui: 2
+
+  resources:
+    /task:
+      put: api.add_task
+    /task/{task_id}:
+      post: api.update_task
+      get: api.task_status
+
